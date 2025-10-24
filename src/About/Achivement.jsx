@@ -41,29 +41,6 @@ const Achivement = () => {
         pauseOnHover: false,
         arrows: false,
         slidesToShow: 3,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    centerPadding: "0px",
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    centerPadding: "0px",
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    centerPadding: "0px",
-                },
-            },
-        ],
     };
 
     return (
@@ -98,10 +75,6 @@ const Achivement = () => {
                         slidesPerView={1}
                         autoplay={{ delay: 2500, disableOnInteraction: false }}
                         loop={true}
-                        breakpoints={{
-                            480: { slidesPerView: 1 },
-                            768: { slidesPerView: 2 },
-                        }}
                         modules={[Autoplay]}
                         className="w-full"
                     >
