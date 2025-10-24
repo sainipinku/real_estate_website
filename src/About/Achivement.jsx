@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import AnimatedHeading from "../component/AnimatedHeading";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import "./Achivement.css"; // 👈 Add custom blur styling here
 
 const Achivement = () => {
     const cities = [
@@ -17,7 +16,7 @@ const Achivement = () => {
         {
             img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image17.png",
         },
-            {
+        {
             img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image18.png",
         },
         {
@@ -30,13 +29,15 @@ const Achivement = () => {
 
     const settings = {
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 2000,
         speed: 800,
-        className: "center",
-        centerMode: true,
         infinite: true,
-        centerPadding: "60px",
+        centerMode: true,
+        centerPadding: "0px", // 👈 prevents partial side slides
         slidesToShow: 3,
+        cssEase: "ease-in-out",
+        pauseOnHover: false,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -47,6 +48,13 @@ const Achivement = () => {
             },
             {
                 breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 460,
                 settings: {
                     slidesToShow: 1,
                     centerPadding: "0px",
@@ -66,12 +74,12 @@ const Achivement = () => {
             <div className="relative max-w-[1200px] mx-auto slider-container">
                 <Slider {...settings}>
                     {cities.map((item, index) => (
-                        <div key={index} className="p-4">
-                            <div className="slide-item">
+                        <div key={index}>
+                            <div className="slide-item flex justify-center items-center">
                                 <img
                                     src={item.img}
                                     alt={`Achievement ${index + 1}`}
-                                    className="h-[450px] md:h-[480px] object-contain w-full rounded-xl"
+                                    className="w-full h-[420px] md:h-[480px] xl:h-[500px] object-cover rounded-xl transition-transform duration-500"
                                 />
                             </div>
                         </div>
