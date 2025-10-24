@@ -27,41 +27,63 @@ const Achivement = () => {
         },
     ];
 
-  const settings = {
-  autoplay: true,
-  autoplaySpeed: 2000,
-  speed: 800,
-  infinite: true,
-  centerMode: true,
-  centerPadding: "0px",
-  cssEase: "ease-in-out",
-  pauseOnHover: false,
-  arrows: false,
+    const settings = {
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 800,
+        infinite: true,
+        centerMode: true,
+        centerPadding: "0px",
+        cssEase: "ease-in-out",
+        pauseOnHover: false,
+        arrows: false,
+        // slidesToShow: 3, // Default (for 1200–1800px)
+        responsive: [
+               {
+                breakpoint: 3000, // 👈 Very large screens (e.g. 2K or ultrawide)
+                settings: {
+                    slidesToShow: 3, // show 5 images on big screens
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 2200, // 👈 Very large screens (e.g. 2K or ultrawide)
+                settings: {
+                    slidesToShow: 3, // show 5 images on big screens
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 1800, // 👈 Large desktops
+                settings: {
+                    slidesToShow: 3, // show 4 images
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 1200, // Normal desktops / laptops
+                settings: {
+                    slidesToShow: 3,
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 768, // Tablets
+                settings: {
+                    slidesToShow: 2,
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 460, // Phones
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: "0px",
+                },
+            },
+        ],
+    };
 
-  responsive: [
-    {
-      breakpoint: 1024, // tablets / small desktops
-      settings: {
-        slidesToShow: 3,
-        centerPadding: "0px",
-      },
-    },
-    {
-      breakpoint: 768, // tablets
-      settings: {
-        slidesToShow: 2,
-        centerPadding: "0px",
-      },
-    },
-    {
-      breakpoint: 460, // phones
-      settings: {
-        slidesToShow: 1, // 👈 now mobile shows 1 image
-        centerPadding: "0px",
-      },
-    },
-  ],
-};
 
 
     return (
