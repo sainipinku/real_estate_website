@@ -80,9 +80,9 @@ function Contact() {
             <div className={`relative md:mt-[-150px]`}>
                         {/* Background Image */}
                 <img
-                    src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/project/DSC00509[1].JPG"}
+                    src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/contact-us-image.jpg"}
                     alt="Logo"
-                    className="w-full h-[300px] sm:h-[400px] md:h-[600px] xl:h-[800px] object-cover object-bottom"
+                    className="w-full h-[300px] sm:h-[400px] md:h-[600px] xl:h-[800px] object-cover "
                 />
                         {/* Overlay */}
                         <div className="absolute inset-0 bg-black/50"></div>
@@ -162,7 +162,7 @@ function Contact() {
             {/* Form + Text */}
             <div className="relative bg-[#F8F6F2] py-[30px] md:py-[50px] lg:py-[70px]">
                 <div className="absolute left-[0] bottom-[0]">
-                    <img src={"/home/contactshap.png"} alt="Interior" className=" w-full h-auto object-cover" />
+                    <img src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/contactshap.png"} alt="Interior" className=" w-full h-auto object-cover" />
                 </div>
 
                 <div className="max-w-[1320px] bg-[#F8F6F2] mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">

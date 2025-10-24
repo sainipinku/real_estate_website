@@ -6,6 +6,7 @@ import jobsDetails from '../Json/Project.json';
 import AnimatedHeading from "../component/AnimatedHeading";
 import { useEffect, useState } from "react";
 import Listing from "../Admin/Apis/Listing";
+import ImageGallery from "./ImageGallery";
 function Details() {
     const { slug } = useParams();
     const [jobs, setJobs] = useState([]);
@@ -97,12 +98,14 @@ function Details() {
                         </div>
                     </div>
                 </div>
-                <div className="flex w-full md-w-[67%] flex-col gap-[20px]">
+                {/* <div className="flex w-full md-w-[67%] flex-col gap-[20px]">
                     {jobs?.Image?.map((feature, index) => (
-                        <img src={feature} alt="Logo" className="object-cover min-h-[250px] md:min-h-[300px] lg:min-h-[450px] w-full" />
+                        <img src={feature} alt="Logo"
+                         className="object-cover min-h-[250px] md:min-h-[300px] lg:min-h-[450px] w-full" />
                     ))}
 
-                </div>
+                </div> */}
+                <ImageGallery jobs={jobs} />
             </div>
 
             <div className="px-[15px] py-[30px] md:py-[60px] lg:py-[100px] bg-[#F8F6F2]">

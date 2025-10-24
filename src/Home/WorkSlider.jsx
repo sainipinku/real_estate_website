@@ -72,7 +72,7 @@ const SliderWithFade = () => {
 
               {/* OVERLAY IMAGE */}
               <img
-                src={"/home/slideroverlay.png"}
+                src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/slideroverlay.png"}
                 alt="Overlay"
                 className="absolute inset-0 w-full h-full object-cover z-10"
               />

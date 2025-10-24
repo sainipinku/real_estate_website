@@ -43,7 +43,7 @@ function Project() {
             <div className="min-h-screen">
                 <Header />
                 <Banner
-                    image={"/home/projectbanner.jpg"}
+                    image={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/projectbanner.jpg"}
                     title={"Our Projects"}
                     overlay={true}
                 />

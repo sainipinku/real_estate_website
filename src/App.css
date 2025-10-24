@@ -158,3 +158,17 @@ nav ul li a{color:#fff;font-size:20px;font-weight:400;}
 /* .slick-center .slide-item img {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 } */
+
+
+/* /Modal  Gallery  */
+.modalGallery {
+  @apply fixed inset-0 bg-black z-[9999] flex items-center justify-center;
+}
+
+.modalGallery img {
+  @apply object-contain max-h-[90vh] max-w-[90vw];
+}
+
+.modalGallery .close {
+  @apply fixed top-8 right-8 cursor-pointer text-white text-4xl;
+}

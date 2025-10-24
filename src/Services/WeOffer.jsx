@@ -28,14 +28,14 @@ export default function WeOffer({ services }) {
         >
           {services && services?.map((service, idx) => (
             <SwiperSlide key={idx}>
-              <div className="relative h-[300px] md:h-[350px] lg:md:h-[420px] xl:md:h-[480px] w-full overflow-hidden shadow-lg group cursor-grab">
+              <div className="relative h-[300px] md:h-[500px]  lg:h-[450px] w-full overflow-hidden shadow-lg group cursor-grab">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-[10%] flex items-end justify-start px-[15px] pb-[15px]">
-                  <h3 className="fontspring text-black text-[18px] md:text-[22px] lg:text-[26px] text-left tracking-wider leading-[22px] md:leading-[28px] lg:leading-[30px]">{service.title}</h3>
+                  <h3 className="fontspring text-black text-[20px] md:text-[24px] lg:text-[28px] text-left tracking-wider leading-[22px] md:leading-[28px] lg:leading-[30px]">{service.title}</h3>
                 </div>
               </div>
             </SwiperSlide>

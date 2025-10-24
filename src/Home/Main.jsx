@@ -18,8 +18,10 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
+import { Link, useNavigate } from "react-router-dom";
 
 function Main() {
+  const navigate = useNavigate();
 
   const slides = [
     {
@@ -30,7 +32,12 @@ function Main() {
     },
     {
       front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/ServicesPhoto.jpg",
-    }
+    },
+     {
+      front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/work/Cadmax.jpg",
+    },
+
+   
   ]
   useEffect(() => {
     AOS.init();
@@ -84,7 +91,7 @@ function Main() {
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
           <div className="relative w-full md:w-1/2 mb-[40px] lg:mb-[40px]">
             <img
-              src={"/home/hom2.jpg"}
+              src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/hom2.jpg"}
               alt="Interior"
               className="w-full h-auto object-cover"
               data-aos="fade-down"
@@ -102,7 +109,7 @@ function Main() {
               className="absolute left-[-30px] bottom-[-30px] md:left-[-90px] md:bottom-[-50px]"
             >
               <img
-                src={"/home/homebg.jpg"}
+                src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/homebg.jpg"}
                 alt="Interior"
                 className="w-full max-w-[200px] md:max-w-[300px] h-auto object-cover"
               />
@@ -120,7 +127,7 @@ function Main() {
                 With 20 years of experience, our team combines accuracy with creativity to redefine untapped environments to living milestones
               </p>
             </AnimatedHeading>
-            <button className="min-w-[160px] xl:min-w-[220px] mt-8 px-[10px] py-[13px] tracking-widest border border-[94A393] text-[#94A393] text-[14px] font-[600] tracking-wide text-[#94A393] hover:bg-[#94A393] hover:text-[#fff] transition-all uppercase tracking-wider">
+            <button onClick={()=>{navigate("/about")}} className="min-w-[160px] xl:min-w-[220px] mt-8 px-[10px] py-[13px] tracking-widest border border-[94A393] text-[#94A393] text-[14px] font-[600] tracking-wide text-[#94A393] hover:bg-[#94A393] hover:text-[#fff] transition-all uppercase tracking-wider">
               More About Us
             </button>
           </div>

@@ -18,7 +18,7 @@ export default function WhyChooseUs({ home }) {
             >
               {/* Icon */}
               <div className="text-[#9aa396] mb-4 text-3xl transition-transform duration-500 ease-in-out group-hover:-translate-y-1">
-                <img src={"/home/chooseicon.png"} alt="Icon" className="w-[40px] h-[40px]" />
+                <img src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/chooseicon.png"} alt="Icon" className="w-[40px] h-[40px]" />
               </div>
 
               {/* Title */}

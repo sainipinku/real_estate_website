@@ -15,11 +15,11 @@ function Services() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const services = [
-    { title: "URBAN PLANNING", image: "/services/service22.jpg", slug: "urban-planning" },
-    { title: "REAL STATE", image: "/services/services11.jpg", slug: "real-state" },
-    { title: "INFRASTRUCTURE ", image: "/work/Infrastructure.jpg", slug: "infrastructure" },
-    { title: "ARCHITECTURE", image: "/services/services44.jpg", slug: "architecture" },
-    { title: "INTERIOR DESIGNING", image: "/services/service33.jpg", slug: "interior-designing" },
+    { title: "URBAN PLANNING", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/service22.jpg", slug: "urban-planning" },
+    { title: "REAL ESTATE", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/services11.jpg", slug: "real-estate" },
+    { title: "INFRASTRUCTURE ", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/work/Infrastructure.jpg", slug: "infrastructure" },
+    { title: "ARCHITECTURE", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/services44.jpg", slug: "architecture" },
+    { title: "INTERIOR DESIGNING", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/service33.jpg", slug: "interior-designing" },
   ];
 
   return (
@@ -29,7 +29,7 @@ function Services() {
         {/* Hero section */}
         <div className="relative md:mt-[-150px]">
           <img
-            src={"/home/exploreservicebg.jpg"}
+            src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/a-panoramic-view-of-the-city-with-skyscrapers-surrounded-by-greenery-in-a-miniature-model-highlights-the-balance-between-urbanization-and-ecology-photo.jpg"}
             alt="Logo"
             className="object-cover min-h-[350px] md:min-h-[400px] lg:min-h-[450px] w-full"
           />
@@ -88,7 +88,7 @@ function Services() {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-75"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="hover:text-yellow-400 text-white text-[16px] uppercase font-semibold tracking-wide text-center">
+                    <h3 className="hover:text-yellow-400 text-white text-[20px] md:text-[22px] uppercase font-semibold tracking-wide text-center">
                       {service.title}
                     </h3>
                   </div>

@@ -30,7 +30,7 @@ function About() {
     return (<>
         <div className="min-h-screen ">
             <Header />
-            <Banner image={"/home/Updated.png"} title={"Why Us"} css={"md:mt-[-100px] "} overlay={false} />
+            <Banner image={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/Updated.png"} title={"Why Us"} css={"md:mt-[-100px] "} overlay={false} />
             <div className="pt-[40px] md:pt-[50px] lg-[80px] pb-[90px] px-[15px]">
                 <AnimatedHeading>
 
@@ -59,7 +59,7 @@ function About() {
 
                 <div className="max-w-[2000px] m-auto mt-[30px] mb-[20px] md:mb-[10px]">
                     <img
-                        src={"/home/a1bout2.jpg"}
+                        src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/a1bout2.jpg"}
                         alt="Logo"
                         className="max-w-[1200px] w-full object-contain mx-auto"
                     />
@@ -79,7 +79,7 @@ function About() {
                             <div key={index} className="bg-white p-[20px] md:p-[20px] lg:p-[40px] shadow-md text-left hover:shadow-lg transition transition-all duration-500 ease-in-out transform hover:-translate-y-5 hover:shadow-xl">
                                 {/* Replace with your own SVG or icon */}
                                 <div className="text-[#9aa396] mb-4 text-3xl transition-transform duration-500 ease-in-out group-hover:-translate-y-1">
-                                    <img src={"/home/chooseicon.png"} alt="Logo" className="" />
+                                    <img src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/chooseicon.png"} alt="Logo" className="" />
                                 </div>
                                 <h3 className="fontspring text-[18px] md:text-[22px] lg:text-[26px] text-[#000112] mb-2 transition duration-500 ease-in-out">
                                     {item.title}
@@ -98,7 +98,7 @@ function About() {
             <section className="bg-white py-[30px] md:py-[70px] lg:py-[80px] xl:py-[100px]">
                 <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-[60px]">
                     <div className="w-full md:w-1/2">
-                        <img src={"/home/about1.jpg"} alt="Interior" className=" w-full h-auto object-cover" />
+                        <img src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/about1.jpg"} alt="Interior" className=" w-full h-auto object-cover" />
                     </div>
                     <div className="w-full md:w-1/2 md:text-left">
                         <AnimatedHeading>

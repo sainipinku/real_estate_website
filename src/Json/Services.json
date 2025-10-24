@@ -1,137 +1,133 @@
 {
     "urban-planning": {
         "title": "Urban Planning",
-        "logo": "/services/cadmaxprojectscopy.png",
+        "logo": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/cadmaxprojectscopy.png",
         "para": "The best urban planning is invisible; it quietly supports life, movement, and interaction.",
         "description": "Our company is recognised as India’s best urban planning and land surveying company as we have planned more than 10,000 hactares of land in past 20 years and have proudly satisfied more than 1000 clients with our planning skills and accuracy.",
         "description2": "Almost all the townships and colonies of the topmost colonisers and builders such as Mangalam builders, Kedia builders, Riyasat infra developers, Gokul Kripa , Ashiana builders, and Vatika group and many more are designed by Cadmax Private Ltd",
-        "image": "/services/SWARNABHOOMIAJMERModel_page-0001.jpg",
-        "image2": "/services/RIYASAT.jpg",
+        "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/SWARNABHOOMIAJMERModel_page-0001.jpg",
+        "image2": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/RIYASAT.jpg",
         "features": [
             {
                 "title": "Master planning",
-                "image": "/services/SWARNABHOOMIAJMERModel_page-0001.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/SWARNABHOOMIAJMERModel_page-0001.jpg"
             },
             {
                 "title": "Land use consultancy",
-                "image": "/services/3XZDP-Zone11B.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/3XZDP-Zone11B.jpg"
             },
             {
                 "title": "Land surveying",
-                "image": "/services/services2.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/services2.jpg"
             },
             {
                 "title": "Master ,zonal and khasra plan superimposal",
-                "image": "/services/map.png"
-            },
-            {
-                "title": "JDA approval consultancy",
-                "image": "/services/RIYASATECOPARK_page-0001.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/map.png"
             }
         ]
     },
-    "real-state": {
-        "title": "Real State",
+    "real-estate": {
+        "title": "Real Estate",
         "para": "Owning a home is a keystone of wealth... both financial affluence and emotional security.",
-        "logo": "/services/CadMaxHomesLogoFinalCTC.png",
+        "logo": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/CadMaxHomesLogoFinalCTC.png",
         "description": "Cadmax Homes is constantly setting milestones in real estate services. We have successfully developed and constructed more than 10 posh colonies with residential villas and elegant buildings such as Prithvi enclave, Aayam,Universal city, Shivam majestic, Shivam Magnus, Cadmax Valley, Ravi Kiran Vihar and many More.",
         "description2": "We have group ventures with established developers and builders such as:\n Cadmax Reality, \n Govind Kripa Cadmax Developers ,\n Cadmax and Mahakal Builders.",
-        "image": "/services/AYAM.jpg",
-        "image2": "/services/eastfacingplotrender0011.jpg",
+        "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/HAMSAfinaloct01(1).jpg",
+        "image2": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/eastfacingplotrender0011.jpg",
         "features": [
             {
                 "title": "Villas",
-                "image": "/services/M1516RENDER01.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/M1516RENDER01.jpg"
             },
             {
                 "title": "Flats",
-                "image": "/services/HAMSAfinaloct01(1).jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/HAMSAfinaloct01(1).jpg"
             },
             {
                 "title": "Plots",
-                "image": "/services/RENDEROPTIONI(1).jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/RENDEROPTIONI(1).jpg"
             }
         ]
     },
     "infrastructure": {
         "para": "Infrastructure is much more than bricks and mortar. It’s the backbone of a thriving society.",
         "title": "Infrastructure",
-        "logo": "/services/CadMaxHomesLogoFinalCTC.png",
+        "logo": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/CadMaxHomesLogoFinalCTC.png",
         "description": "We provide best infrastructural services in townships like road network, sewer network, water supply, rain water harvesting,electricity etc",
         "description2": "We have developed many porshe colonies such as: Sukoon Farms, Bhumija Arapan , Dawarika – The model town.",
-        "image": "/services/RENDEROPTION03.jpg",
-        "image2": "/services/SUKOONFARMSRENDER01_-Photo.jpg",
+        "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/RENDEROPTION03.jpg",
+        "image2": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/SUKOONFARMSRENDER01_-Photo.jpg",
         "features": [
             {
                 "title": "Maingate and boundary construction",
-                "image": "/services/RENDEROPTIONB.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/RENDEROPTIONB.jpg"
             },
             {
                 "title": "Road network",
-                "image": "/services/RENDEROPTIONC.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/RENDEROPTIONC.jpg"
             },
             {
                 "title": "Water suply",
-                "image": "/services/RENDEROPTIONH.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/RENDEROPTIONH.jpg"
             },
             {
                 "title": "Electricity",
-                "image": "/services/RENDER0055.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/RENDER0055.jpg"
             }
         ]
     },
     "architecture": {
         "para": "Architecture should speak of its time and place, but yearn for timelessness.",
         "title": "Architecture",
-        "logo": "/services/ArchinterioLogo.png",
+        "logo": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/ArchinterioLogo.png",
         "description": "Archinterio has became a well recognised architectural and interior design firm In past five years.\n We have successfully completed more than 30 residential and commercial projects, comprising modern, traditional, Roman and neo classical themes.",
         "description2": "Our best projects includes:\nRudra Mahal - Heritage five Star Hotel at Kalwar Road, Mundota\nTT College - An institutional College at Kalwar Road, Subrampura\nRavi Kiran Vihar - A porshe and well developed colony including more than 30 specious Villas at Patrakar colony, Mansarovar",
-        "image": "/services/farmhouserender04.jpg",
-        "image2": "/services/hotelrenderA_2-Photo.jpg",
+        "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/farmhouserender04.jpg",
+        "image2": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/project/hotelrenderA_1-Photo.jpg",
         "features": [
             {
                 "title": "Residential $ commercial planning",
-                "image": "/services/GROUNDFLOORPLAN_page-0001.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/GROUNDFLOORPLAN_page-0001.jpg"
             },
             {
                 "title": "3D elevation designing",
-                "image": "/services/sureshjielevationrender02.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/sureshjielevationrender02.jpg"
             },
             {
                 "title": "Turnkey construction",
-                "image": "/services/Sankarji3drender0033.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/Sankarji3drender0033.jpg"
             },
             {
                 "title": "Renovation",
-                "image": "/services/Elevationrender02.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/Elevationrender02.jpg"
             }
         ]
     },
     "interior-designing": {
         "para": "Design is not just what it looks like and feels like. Design is how it works.",
         "title": "Interior Designing",
-        "logo": "/services/ArchinterioLogo.png",
+        "logo": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/ArchinterioLogo.png",
         "content": "Archinterio has became a well recognised architectural and interior design firm In past five years.      ",
         "description": "We are designing comfortable and luxurious spaces since past 5 years. We have successfully completed more than 30 residential and commercial Interior design projects in heritage as well as modern themes.",
         "description2": "We are popularly known for designing European theme interiors, such as Cadmax group headoffice, Lalkothi ,Govind Kirpa developers, Mangiyawas, Mansarovar.",
-        "image": "/services/kitcherender01(1).jpg",
-        "image2": "/services/RK_021232.jpg",
+        "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/kitcherender01(1).jpg",
+        "image2": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/RK_021232.jpg",
         "features": [
             {
                 "title": "Residential $ commercial planning",
-                "image": "/services/GROUNDFLOORPLAN_page-0001 (1).jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/GROUNDFLOORPLAN_page-0001 (1).jpg"
             },
             {
                 "title": "3D interior designing",
-                "image": "/services/drowingrender02.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/drowingrender02.jpg"
             },
             {
                 "title": "Turnkey projects",
-                "image": "/services/farmhouserender04.jpg"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/farmhouserender04.jpg"
             },
             {
                 "title": "Renovations",
-                "image": "/services/groundfloorrender02 - Copy.png"
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/groundfloorrender02 - Copy.png"
             }
         ]
     }

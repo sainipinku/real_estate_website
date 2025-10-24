@@ -62,11 +62,11 @@ function Estate() {
                     {/* Text Section */}
                     <div className="w-full md:w-1/2 text-center md:text-left">
                         <AnimatedHeading>
-                            <h2 className="fontspring text-[25px] md:text-[30px] lg:text-[40px] xl:text-[50px] 
+                            {/* <h2 className="fontspring text-[25px] md:text-[30px] lg:text-[40px] xl:text-[50px] 
                      leading-[30px] md:leading-[35px] lg:leading-[45px] xl:leading-[55px] text-[#000112]">
                                 Our Expertise
-                            </h2>
-                            <p className="mt-6 text-[16px] md:text-[18px] xl:text-[20px] font-[400] text-[#00011299] whitespace-pre-line">
+                            </h2> */}
+                            <p className="mt-6 text-[18px] md:text-[20px] xl:text-[22px] font-[400] text-[#00011299] whitespace-pre-line">
                                 {service?.description2}
                             </p>
                         </AnimatedHeading>
