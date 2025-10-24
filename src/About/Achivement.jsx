@@ -27,41 +27,42 @@ const Achivement = () => {
         },
     ];
 
-    const settings = {
-        autoplay: true,
-        autoplaySpeed: 2000,
-        speed: 800,
-        infinite: true,
-        centerMode: true,
-        centerPadding: "0px", // 👈 prevents partial side slides
+  const settings = {
+  autoplay: true,
+  autoplaySpeed: 2000,
+  speed: 800,
+  infinite: true,
+  centerMode: true,
+  centerPadding: "0px",
+  cssEase: "ease-in-out",
+  pauseOnHover: false,
+  arrows: false,
+
+  responsive: [
+    {
+      breakpoint: 1024, // tablets / small desktops
+      settings: {
         slidesToShow: 3,
-        cssEase: "ease-in-out",
-        pauseOnHover: false,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    centerPadding: "0px",
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    centerPadding: "0px",
-                },
-            },
-            {
-                breakpoint: 460,
-                settings: {
-                    slidesToShow: 1,
-                    centerPadding: "0px",
-                },
-            },
-        ],
-    };
+        centerPadding: "0px",
+      },
+    },
+    {
+      breakpoint: 768, // tablets
+      settings: {
+        slidesToShow: 2,
+        centerPadding: "0px",
+      },
+    },
+    {
+      breakpoint: 460, // phones
+      settings: {
+        slidesToShow: 1, // 👈 now mobile shows 1 image
+        centerPadding: "0px",
+      },
+    },
+  ],
+};
+
 
     return (
         <div className="py-8 md:py-12 px-4 bg-white">
