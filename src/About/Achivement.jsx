@@ -1,27 +1,59 @@
 // Achivement.jsx
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Autoplay } from "swiper/modules";
+import Slider from "react-slick";
 import AnimatedHeading from "../component/AnimatedHeading";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+// import "./Achivement.css"; // 👈 Add custom blur styling here
 
 const Achivement = () => {
-    // Note: I corrected the key for the Rajasthan image in the array
     const cities = [
         {
-            name: "Chennai",
             img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image18.png",
         },
         {
-            name: "Bangalore",
             img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image19.png",
         },
         {
-            name: "Rajasthan",
+            img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image17.png",
+        },
+            {
+            img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image18.png",
+        },
+        {
+            img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image19.png",
+        },
+        {
             img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image17.png",
         },
     ];
+
+    const settings = {
+        autoplay: true,
+        autoplaySpeed: 1000,
+        speed: 800,
+        className: "center",
+        centerMode: true,
+        infinite: true,
+        centerPadding: "60px",
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: "0px",
+                },
+            },
+        ],
+    };
 
     return (
         <div className="py-8 md:py-12 px-4 bg-white">
@@ -30,41 +62,21 @@ const Achivement = () => {
                     Honours and Achievements
                 </h2>
             </AnimatedHeading>
-            <div className="relative max-w-[1200px] mx-auto">
-                <Swiper
-                    spaceBetween={0}
-                    slidesPerView={3}
-                    autoplay={{
-                        delay: 1000,
-                        disableOnInteraction: false 
-                    }}
-                    loop={true} // This ensures the carousel repeats
-                    breakpoints={{
-                        200: { slidesPerView: 1 },
-                        640: { slidesPerView: 2 },
-                        768: { slidesPerView: 3 },
-                        1024: { slidesPerView: 3 },
-                    }}
-                    modules={[Autoplay]}
-                    className="w-full"
-                >
-                    {/* Map over the cities array to generate slides dynamically */}
+
+            <div className="relative max-w-[1200px] mx-auto slider-container">
+                <Slider {...settings}>
                     {cities.map((item, index) => (
-                        <SwiperSlide key={item.name || index}>
-                            <div
-                                className={`flex flex-col items-center justify-center transition-all duration-500 p-4`}
-                            >
+                        <div key={index} className="p-4">
+                            <div className="slide-item">
                                 <img
-                                    src={item.img} // Use the image URL from the object
-                                    alt={item.name} // Use the name as the alt text
-                                    className="h-[450px] md:h-[480px] object-contain w-full"
+                                    src={item.img}
+                                    alt={`Achievement ${index + 1}`}
+                                    className="h-[450px] md:h-[480px] object-contain w-full rounded-xl"
                                 />
-                                {/* Optional: You could add the city name here if you want it visible */}
-                                {/* <p className="mt-2 text-lg font-semibold">{item.name}</p> */}
                             </div>
-                        </SwiperSlide>
+                        </div>
                     ))}
-                </Swiper>
+                </Slider>
             </div>
         </div>
     );
