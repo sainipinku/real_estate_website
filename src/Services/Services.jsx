@@ -27,7 +27,7 @@ function Services() {
       <div className="min-h-screen">
         <Header />
         {/* Hero section */}
-        <div className="relative md:mt-[-150px]">
+        <div className="relative md:mt-[-150px] ">
           <img
             src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/a-panoramic-view-of-the-city-with-skyscrapers-surrounded-by-greenery-in-a-miniature-model-highlights-the-balance-between-urbanization-and-ecology-photo.jpg"}
             alt="Logo"

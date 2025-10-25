@@ -5,7 +5,7 @@ export default function Readybring() {
   return (
     <section className="relative h-[300px] md:h-[350px] lg:h-[450px] flex items-center justify-center">
       {/* Overlay */}
-      <img src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/readybringbg.jpg"} alt="Interior" className=" w-full h-full object-cover" />
+      <img src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/insur.png"} alt="Interior" className=" w-full h-full object-cover" />
       {/* <div className="absolute inset-0 bg-black bg-opacity-60"></div> */}
 
       {/* Content */}

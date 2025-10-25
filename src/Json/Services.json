@@ -3,9 +3,9 @@
         "title": "Urban Planning",
         "logo": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/cadmaxprojectscopy.png",
         "para": "The best urban planning is invisible; it quietly supports life, movement, and interaction.",
-        "description": "Our company is recognised as India’s best urban planning and land surveying company as we have planned more than 10,000 hactares of land in past 20 years and have proudly satisfied more than 1000 clients with our planning skills and accuracy.",
+        "description": "Our company is recognised as India’s best urban planning and land surveying company as we have planned more than 10,00,000 hactares of land in past 20 years and have proudly satisfied more than 1000 clients with our planning skills and accuracy.",
         "description2": "Almost all the townships and colonies of the topmost colonisers and builders such as Mangalam builders, Kedia builders, Riyasat infra developers, Gokul Kripa , Ashiana builders, and Vatika group and many more are designed by Cadmax Private Ltd",
-        "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/SWARNABHOOMIAJMERModel_page-0001.jpg",
+        "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/UNIVERSALCITY (1)_page-0001.jpg",
         "image2": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/RIYASAT.jpg",
         "features": [
             {
@@ -46,6 +46,10 @@
             {
                 "title": "Plots",
                 "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/RENDEROPTIONI(1).jpg"
+            },
+             {
+                "title": "Villas",
+                "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/photoimagesukkon.jpg"
             }
         ]
     },
@@ -54,9 +58,9 @@
         "title": "Infrastructure",
         "logo": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/CadMaxHomesLogoFinalCTC.png",
         "description": "We provide best infrastructural services in townships like road network, sewer network, water supply, rain water harvesting,electricity etc",
-        "description2": "We have developed many porshe colonies such as: Sukoon Farms, Bhumija Arapan , Dawarika – The model town.",
+        "description2": "We have designed and developed many posh colonies such as : Ravi Kiran Vihar , Cadmax velley , Sachivalya Enclave , Saryu Enclave and many more. Have designed DPR (Detail Project Report) files of more than 200 colonies.",
         "image": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/RENDEROPTION03.jpg",
-        "image2": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/SUKOONFARMSRENDER01_-Photo.jpg",
+        "image2": "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/finalview-04(1).jpg",
         "features": [
             {
                 "title": "Maingate and boundary construction",

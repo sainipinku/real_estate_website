@@ -53,21 +53,20 @@ const Achivement = () => {
                     Honours and Achievements
                 </h2>
             </AnimatedHeading>
-
-            <div className="relative max-w-[1200px] mx-auto">
-                {/* 🔹 Render based on screen size */}
+            <div className="relative ">
                 {!isMobile ? (
                     // Desktop → Slick Slider
                     <Slider {...slickSettings}>
-                        {cities.map((item, index) => (
+                        {cities && cities?.map((item, index) => (
                             <div key={index}>
-                                <div className="slide-item flex justify-center items-center">
-                                    <img
-                                        src={item.img}
-                                        alt={`Achievement ${index + 1}`}
-                                        className="w-full h-[430px] md:h-[490px] xl:h-[520px] object-cover rounded-xl transition-transform duration-500"
-                                    />
-                                </div>
+                             <div className="slide-item flex justify-center items-center bg-white">
+  <img
+    src={item.img}
+    alt={`Achievement ${index + 1}`}
+    className="w-full h-[430px] md:h-[490px] xl:h-[500px] object-contain rounded-xl transition-transform duration-500"
+  />
+</div>
+
                             </div>
                         ))}
                     </Slider>
@@ -81,7 +80,7 @@ const Achivement = () => {
                         modules={[Autoplay]}
                         className="w-full"
                     >
-                        {cities.map((city, idx) => (
+                        {cities && cities?.map((city, idx) => (
                             <SwiperSlide key={idx}>
                                 <div className="flex justify-center">
                                     <img

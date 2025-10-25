@@ -53,13 +53,13 @@ const ImageGallery = ({ jobs }) => {
           </button>
 
           {/* Image */}
-        <div className="flex justify-center items-center h-full ">
-  <img
-    src={jobs.Image[currentIndex]}
-    alt={`Image ${currentIndex}`}
-    className="max-w-full max-h-[80vh] md:max-h-[90vh] lg:max-h-[95vh] object-contain"
-  />
-</div>
+          <div className="flex justify-center items-center h-full ">
+            <img
+              src={jobs.Image[currentIndex]}
+              alt={`Image ${currentIndex}`}
+              className="max-w-full max-h-[80vh] md:max-h-[90vh] lg:max-h-[95vh] object-contain"
+            />
+          </div>
 
 
           {/* Next Button */}

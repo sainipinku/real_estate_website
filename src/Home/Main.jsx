@@ -31,13 +31,10 @@ function Main() {
       front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/banner.jpg",
     },
     {
-      front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/ServicesPhoto.jpg",
-    },
-     {
       front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/work/Cadmax.jpg",
     },
 
-   
+
   ]
   useEffect(() => {
     AOS.init();
@@ -71,7 +68,7 @@ function Main() {
                   alt="Slide"
                   className="object-cover w-full h-full"
                 />
-                <div className="absolute inset-0 bg-black/40"></div>
+                {/* <div className="absolute inset-0 bg-black/40"></div> */}
                 <div className='absolute  left-[0] right-[0] bottom-[50px] w-full max-w-[1320px] m-auto px-[15px]'>
                   <h1 className='mb-[15px] fontspring text-[30px] md:text-[60px] lg:text-[80px] text-white leading-[35px] md:leading-[65px] lg:leading-[85px] pe-[10px] md:pe-[100px] lg:pe-[160px] '>Your Dreams, Our Design</h1>
                   <p className='text-[15px] md:text-[18px] lg:text-[20px] text-[#ffffffd1] pe-[0px] md:pe-[150px] lg:pe-[300px]'>
@@ -127,7 +124,7 @@ function Main() {
                 With 20 years of experience, our team combines accuracy with creativity to redefine untapped environments to living milestones
               </p>
             </AnimatedHeading>
-            <button onClick={()=>{navigate("/about")}} className="min-w-[160px] xl:min-w-[220px] mt-8 px-[10px] py-[13px] tracking-widest border border-[94A393] text-[#94A393] text-[14px] font-[600] tracking-wide text-[#94A393] hover:bg-[#94A393] hover:text-[#fff] transition-all uppercase tracking-wider">
+            <button onClick={() => { navigate("/about") }} className="min-w-[160px] xl:min-w-[220px] mt-8 px-[10px] py-[13px] tracking-widest border border-[94A393] text-[#94A393] text-[14px] font-[600] tracking-wide text-[#94A393] hover:bg-[#94A393] hover:text-[#fff] transition-all uppercase tracking-wider">
               More About Us
             </button>
           </div>
