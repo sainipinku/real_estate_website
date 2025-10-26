@@ -27,11 +27,11 @@ function Services() {
       <div className="min-h-screen">
         <Header />
         {/* Hero section */}
-        <div className="relative md:mt-[-220px] lg:mt-[-280px]">
+        <div className="relative mt-[-150px] md:mt-[-220px] lg:mt-[-280px]">
           <img
             src="https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/servicesbanner.jpg"
             alt="Logo"
-            className="object-contain  min-h-[350px] md:min-h-[400px] lg:min-h-[450px] w-full"
+            className="object-cover md:object-contain  min-h-[350px] md:min-h-[400px] lg:min-h-[450px] w-full"
           />
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="max-w-[1320px] m-auto absolute left-0 right-0 bottom-[30px] md:bottom-[50px] lg:bottom-[90px] z-[1] px-[15px]">
