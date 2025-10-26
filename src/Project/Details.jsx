@@ -41,7 +41,7 @@ function Details() {
                     className="w-full h-[500px] md:h-[600px] xl:h-[650px]  md:max-h-[900px] object-cover"
                 />
                 {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-black/50"></div>
+                {/* <div className="absolute inset-0 bg-black/50"></div> */}
                 {/* Content */}
                 <div className="max-w-[1320px] m-auto absolute left-0 right-0 bottom-[30px] md:bottom-[50px] lg:bottom-[90px] z-[10] px-[15px]">
                     <AnimatedHeading>
