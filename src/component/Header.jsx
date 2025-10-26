@@ -7,8 +7,8 @@ export default function Header() {
 
   const navLinkClasses = ({ isActive }) =>
     `relative px-2 py-1 transition-colors duration-300 
-   hover:text-white  md:hover:text-black 
-    ${isActive ? "text-white md:text-black font-semibold" : "text-white"}`;
+   hover:text-white  md:hover:text-white   lg:hover:text-black 
+    ${isActive ? "text-white md:text-white  lg:text-black font-semibold" : "text-white"}`;
 
   return (
     <nav className="sticky top-0 bg-black/20 md:bg-[#00000063] z-[99] py-2 md:py-[12px]">
