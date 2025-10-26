@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
+import "swiper/css/autoplay";
 
 function Services() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -50,17 +50,18 @@ function Services() {
             autoplay={{
               delay: 1500,
               disableOnInteraction: false,
-              reverseDirection: false, // change to true if you want left-to-right
+              reverseDirection: false,
             }}
             loop={true}
-            spaceBetween={20}
+            spaceBetween={15}
+            centeredSlides={false}
             slidesPerView={1}
             breakpoints={{
-              320: { slidesPerView: 1 },   // mobile
-              768: { slidesPerView: 2 },   // tablet
-              1024: { slidesPerView: 3 },  // desktop
+              320: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
             }}
-            className="w-full h-[400px] md:h-[500px] lg:h-[600px] "
+            className="w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden"
           >
             {services && services.map((service, index) => (
               <SwiperSlide
@@ -69,11 +70,11 @@ function Services() {
                   flexBasis:
                     window.innerWidth >= 1024
                       ? hoveredIndex === index
-                        ? "40%"
+                        ? "50%"      // slightly smaller to avoid overflow
                         : hoveredIndex !== null
-                          ? "25%"
+                          ? "30%"  // balanced so total ≈ 100%
                           : "33.33%"
-                      : "100%",
+                      : "100%"
                 }}
               >
                 <Link
@@ -84,6 +85,7 @@ function Services() {
                 >
                   <img
                     src={service.image}
+                    loading="lazy"
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-75"
                   />
