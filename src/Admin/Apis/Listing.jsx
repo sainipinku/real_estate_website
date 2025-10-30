@@ -128,6 +128,8 @@ class Listing extends Component {
      async ProjectGetDetails(slug) {
         return Api.get(`/project-details/${slug}`)
     }
+
+    
     render() {
         return (
             <div>

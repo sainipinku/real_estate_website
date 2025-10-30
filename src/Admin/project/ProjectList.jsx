@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { MdAdd, MdEdit } from "react-icons/md";
+import { MdAdd, MdDelete, MdEdit } from "react-icons/md";
 import debounce from "lodash.debounce";
 import Pagination from "../component/Pagination";
 import NoDataPage from "../component/NoDataPage";
@@ -9,6 +9,7 @@ import Listing from "../Apis/Listing";
 import Image from "../component/Image";
 import SideBarAdmin from "../common/SideBarAdmin";
 import HeaderAdmin from "../common/HeaderAdmin";
+import toast from "react-hot-toast";
 
 const ProjectList = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -59,6 +60,19 @@ const ProjectList = () => {
     setCurrentPage(page);
   };
 
+  const handleDelete = async (id) => {
+  try {
+    const main = new Listing();
+    await main.ProjectDelete({id : id});
+    toast.success("Project deleted successfully!");
+    fetchMarketLists(search, currentPage);
+  } catch (error) {
+    console.error("Error deleting project:", error);
+    toast.error("Failed to delete project.");
+  }
+};
+
+
   return (
     <div className="md:flex flex-wrap bg-[#F5F6FB]">
       <SideBarAdmin />
@@ -90,11 +104,26 @@ const ProjectList = () => {
                       className="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300"
                     >
                       <Link to={`/admin/project-details/${blog.slug}`}>
-                        <Image
-                          className="w-full h-[200px] object-cover"
-                          alt={blog.title || "Blog Image"}
-                          src={blog?.list_image || "/work/Interior.png"}
-                        />
+                      <div className="relative">
+  {/* Image */}
+  <Link to={`/admin/project-details/${blog.slug}`}>
+    <Image
+      className="w-full h-[200px] object-cover rounded-t-lg"
+      alt={blog.title || "Blog Image"}
+      src={blog?.list_image || "/work/Interior.png"}
+    />
+  </Link>
+
+  {/* Delete Button Overlay */}
+  <button
+    onClick={() => handleDelete(blog._id)}
+    className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded-full hover:bg-red-700 shadow-md transition"
+    title="Delete Project"
+  >
+   <MdDelete size={20} />
+  </button>
+</div>
+
                       </Link>
 
                       <div className="p-4">
