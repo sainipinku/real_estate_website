@@ -113,7 +113,7 @@ const ProjectList = () => {
 
                         {/* Delete Button Overlay */}
                         <button
-                          onClick={() => handleDelete(blog._id)}
+                          // onClick={() => handleDelete(blog._id)}
                           className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded-full hover:bg-red-700 shadow-md transition"
                           title="Delete Project"
                         >
