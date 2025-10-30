@@ -99,48 +99,46 @@ const ProjectList = () => {
               ) : listing.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-3">
                   {listing.map((blog, index) => (
-                    <Link to={`/admin/project-details/${blog.slug}`}
+                    <div
                       key={index}
                       className="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300"
                     >
+                      <div className="relative">
+                        {/* Image */}
+                        <Image
+                          className="w-full h-[200px] object-cover rounded-t-lg"
+                          alt={blog.title || "Blog Image"}
+                          src={blog?.list_image || "/work/Interior.png"}
+                        />
+
+                        {/* Delete Button Overlay */}
+                        <button
+                          onClick={() => handleDelete(blog._id)}
+                          className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded-full hover:bg-red-700 shadow-md transition"
+                          title="Delete Project"
+                        >
+                          <MdDelete size={20} />
+                        </button>
+                      </div>
+
                       <Link to={`/admin/project-details/${blog.slug}`}>
-                        <div className="relative">
-                          {/* Image */}
-                          <Image
-                            className="w-full h-[200px] object-cover rounded-t-lg"
-                            alt={blog.title || "Blog Image"}
-                            src={blog?.list_image || "/work/Interior.png"}
-                          />
+                        <div className="p-4">
+                          <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                            {blog.title || "Untitled"}
+                          </h3>
+                          <p className="text-gray-500 text-sm mb-1">
+                            <strong>Client:</strong> {blog.client || "N/A"}
+                          </p>
 
-                          {/* Delete Button Overlay */}
-                          <button
-                            onClick={() => handleDelete(blog._id)}
-                            className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded-full hover:bg-red-700 shadow-md transition"
-                            title="Delete Project"
-                          >
-                            <MdDelete size={20} />
-                          </button>
-                        </div>
+                          <p className="text-gray-500 text-sm mb-3">
+                            <strong>Category:</strong> {blog.category || "N/A"}
+                          </p>
 
-                      </Link>
+                          <p className="text-gray-600 line-clamp-3 text-sm">
+                            {blog?.short_content || blog?.content?.slice(0, 100) || "No content available."}
+                          </p>
 
-                      <div className="p-4">
-                        <h3 className="text-lg font-semibold text-gray-800 mb-1">
-                          {blog.title || "Untitled"}
-                        </h3>
-                        <p className="text-gray-500 text-sm mb-1">
-                          <strong>Client:</strong> {blog.client || "N/A"}
-                        </p>
-
-                        <p className="text-gray-500 text-sm mb-3">
-                          <strong>Category:</strong> {blog.category || "N/A"}
-                        </p>
-
-                        <p className="text-gray-600 line-clamp-3 text-sm">
-                          {blog?.short_content || blog?.content?.slice(0, 100) || "No content available."}
-                        </p>
-
-                        {/* <div className="flex justify-between items-center mt-4 border-t pt-3">
+                          {/* <div className="flex justify-between items-center mt-4 border-t pt-3">
                           <Link
                             to={`/admin/project-update/${blog._id}`}
                             className="p-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
@@ -155,8 +153,9 @@ const ProjectList = () => {
                             fetchTeamList={fetchMarketLists}
                           />
                         </div> */}
-                      </div>
-                    </Link>
+                        </div>
+                      </Link>
+                    </div>
                   ))}
                 </div>
               ) : (
