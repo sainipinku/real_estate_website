@@ -35,7 +35,7 @@ export default function WeOffer({ services }) {
                   className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-[10%] flex items-end justify-start px-[15px] pb-[15px]">
-                  <h3 className="fontspring text-black text-[20px] md:text-[24px] lg:text-[28px] text-left tracking-wider leading-[22px] md:leading-[28px] lg:leading-[30px]">{service.title}</h3>
+                  <h3 className="fontspring text-black text-[20px] md:text-[24px] lg:text-[28px] text-center tracking-wider leading-[22px] md:leading-[28px] lg:leading-[30px]">{service.title}</h3>
                 </div>
               </div>
             </SwiperSlide>

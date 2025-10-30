@@ -26,7 +26,7 @@ function Estate() {
                 <div className="max-w-[1320px] m-auto absolute left-0 right-0 bottom-[30px] md:bottom-[50px] lg:bottom-[90px] z-[10] px-[15px]">
                     <AnimatedHeading>
                         <div className="flex flex-col items-left">
-                            <h2 className="fontspring text-[20px] md:text-[40px] lg:text-[60px] xl:text-[80px] text-white">
+                            <h2 className="fontspring text-[20px] md:text-[40px] lg:text-[60px] xl:text-[80px] text-black">
                                 {service?.title}
                             </h2>
 
