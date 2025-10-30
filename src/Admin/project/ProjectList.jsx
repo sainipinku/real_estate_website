@@ -61,16 +61,16 @@ const ProjectList = () => {
   };
 
   const handleDelete = async (id) => {
-  try {
-    const main = new Listing();
-    await main.ProjectDelete({id : id});
-    toast.success("Project deleted successfully!");
-    fetchMarketLists(search, currentPage);
-  } catch (error) {
-    console.error("Error deleting project:", error);
-    toast.error("Failed to delete project.");
-  }
-};
+    try {
+      const main = new Listing();
+      await main.ProjectDelete({ id: id });
+      toast.success("Project deleted successfully!");
+      fetchMarketLists(search, currentPage);
+    } catch (error) {
+      console.error("Error deleting project:", error);
+      toast.error("Failed to delete project.");
+    }
+  };
 
 
   return (
@@ -104,25 +104,23 @@ const ProjectList = () => {
                       className="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300"
                     >
                       <Link to={`/admin/project-details/${blog.slug}`}>
-                      <div className="relative">
-  {/* Image */}
-  <Link to={`/admin/project-details/${blog.slug}`}>
-    <Image
-      className="w-full h-[200px] object-cover rounded-t-lg"
-      alt={blog.title || "Blog Image"}
-      src={blog?.list_image || "/work/Interior.png"}
-    />
-  </Link>
+                        <div className="relative">
+                          {/* Image */}
+                          <Image
+                            className="w-full h-[200px] object-cover rounded-t-lg"
+                            alt={blog.title || "Blog Image"}
+                            src={blog?.list_image || "/work/Interior.png"}
+                          />
 
-  {/* Delete Button Overlay */}
-  <button
-    onClick={() => handleDelete(blog._id)}
-    className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded-full hover:bg-red-700 shadow-md transition"
-    title="Delete Project"
-  >
-   <MdDelete size={20} />
-  </button>
-</div>
+                          {/* Delete Button Overlay */}
+                          <button
+                            onClick={() => handleDelete(blog._id)}
+                            className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded-full hover:bg-red-700 shadow-md transition"
+                            title="Delete Project"
+                          >
+                            <MdDelete size={20} />
+                          </button>
+                        </div>
 
                       </Link>
 
