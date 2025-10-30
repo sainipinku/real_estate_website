@@ -13,10 +13,11 @@ const ClientSlider = () => {
     { front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/MAHIMA.png", back: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/MAHIMA.png", title: 'Manglam Group' },
     { front: 'https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/MAHINDRAW.png', back: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/MAHINDRAW.png", title: 'Mahindra World City, Jaipur' },
     { front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/MANGLAMGROUP.png", back: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/MANGLAMGROUP.png", title: 'Mahima Group' },
-    { front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/goorej.png", back: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/goorej.png", title: 'GODREJ GROUP, Jaipur' },
     { front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/riyasat.jpg", back: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/riyasat.jpg", title: 'Riyasat GROUP, Jaipur' },
     { front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/tvtv.jpg", back: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/tvtv.jpg", title: 'TATA Projects Enterprise' },
     { front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/ultratech.jpg", back: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/ultratech.jpg", title: 'UltraTech Cement Ltd' },
+    { front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/KGK-Realty-logo-210x300.png", back: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/logo/KGK-Realty-logo-210x300.png", title: 'KGK Realty' },
+
 ];
 
     return (
