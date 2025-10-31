@@ -47,7 +47,7 @@ function Login() {
                 {/* Left Image */}
                 <div className="hidden md:block w-full md:w-1/2">
                     <img
-                        src={"/home/homebg.jpg"}
+                        src={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/work/Cadmax.jpg"}
                         alt="Login"
                         className="object-cover w-full h-full"
                     />

@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const API_URL = "https://api.cadmaxpro.com/api/";
-
+const API_URL =  process.env.REACT_BASE_URL || "https://api.cadmaxpro.com/api";
 
 function getToken() {
   if (typeof window !== 'undefined') {
@@ -10,8 +9,6 @@ function getToken() {
   }
   return null;
 }
-
-
 
 let Api = axios.create({
   baseURL: API_URL,
@@ -57,4 +54,4 @@ ApiallowFile.interceptors.request.use(
   }
 );
 
-export {Api, ApiallowFile};
+export { Api, ApiallowFile };

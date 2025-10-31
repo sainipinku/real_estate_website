@@ -81,9 +81,7 @@ function Main() {
           ))}
         </Swiper>
       </div>
-
       <div className='fontspring bg-[#94A393] px-[15px] py-[20px] text-center text-[20px] text-white'>Let’s design spaces that reflects your ambitions</div>
-
       <section className="bg-white py-[30px] md:py-[70px] lg:py-[80px] xl:py-[100px]">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
           <div className="relative w-full md:w-1/2 mb-[40px] lg:mb-[40px]">
