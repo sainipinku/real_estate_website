@@ -56,6 +56,8 @@ function App() {
         <Route path="/admin/job-list" element={<JobList />} />
         <Route path="/admin/career-user-list" element={<CareerView />} />
         <Route path="/admin/project-add" element={<ProjectAdd />} />
+        <Route path="/admin/project-edit/:id" element={<ProjectAdd />} />
+
         <Route path="/admin/project-list" element={<ProjectList />} />
         <Route path="/admin/project-details/:slug" element={<AdminProjectDetail />} />
 

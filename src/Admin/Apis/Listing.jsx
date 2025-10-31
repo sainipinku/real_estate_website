@@ -72,7 +72,7 @@ class Listing extends Component {
     }
 
     async ProjectUpdate(data) {
-        return Api.post("/project/update", data)
+        return ApiallowFile.post("/project-update", data)
     }
 
     async ProjectDelete(data) {

@@ -61,11 +61,22 @@ const ProjectList = () => {
   };
 
   const handleDelete = async (id) => {
+    console.log("id", id)
     try {
       const main = new Listing();
-      await main.ProjectDelete({ id: id });
+      await main.ProjectDelete({ id });
+
       toast.success("Project deleted successfully!");
-      fetchMarketLists(search, currentPage);
+
+      // Remove locally first
+      setListing((prev) => prev.filter((item) => item._id !== id));
+
+      // If this was the last item on the page, go to previous page
+      if (listing.length === 1 && currentPage > 1) {
+        setCurrentPage((prev) => prev - 1);
+      } else {
+        fetchMarketLists(search, currentPage);
+      }
     } catch (error) {
       console.error("Error deleting project:", error);
       toast.error("Failed to delete project.");
@@ -105,20 +116,32 @@ const ProjectList = () => {
                     >
                       <div className="relative">
                         {/* Image */}
-                        <Image
+                        <img
                           className="w-full h-[200px] object-cover rounded-t-lg"
                           alt={blog.title || "Blog Image"}
                           src={blog?.list_image || "/work/Interior.png"}
                         />
 
-                        {/* Delete Button Overlay */}
-                        <button
-                          onClick={() => handleDelete(blog._id)}
-                          className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded-full hover:bg-red-700 shadow-md transition"
-                          title="Delete Project"
-                        >
-                          <MdDelete size={20} />
-                        </button>
+                        {/* Delete + Edit Buttons Overlay */}
+                        <div className="absolute top-2 right-2 flex gap-2">
+                          {/* Edit Button */}
+                          <Link
+                            to={`/admin/project-edit/${blog.slug}`}
+                            className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 shadow-md transition"
+                            title="Edit Project"
+                          >
+                            <MdEdit size={20} />
+                          </Link>
+
+                          {/* Delete Button */}
+                          <button
+                            onClick={() => handleDelete(blog._id)}
+                            className="bg-red-600 text-white p-2 rounded-full hover:bg-red-700 shadow-md transition"
+                            title="Delete Project"
+                          >
+                            <MdDelete size={20} />
+                          </button>
+                        </div>
                       </div>
 
                       <Link to={`/admin/project-details/${blog.slug}`}>
@@ -135,24 +158,10 @@ const ProjectList = () => {
                           </p>
 
                           <p className="text-gray-600 line-clamp-3 text-sm">
-                            {blog?.short_content || blog?.content?.slice(0, 100) || "No content available."}
+                            {blog?.short_content ||
+                              blog?.content?.slice(0, 100) ||
+                              "No content available."}
                           </p>
-
-                          {/* <div className="flex justify-between items-center mt-4 border-t pt-3">
-                          <Link
-                            to={`/admin/project-update/${blog._id}`}
-                            className="p-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-                          >
-                            <MdEdit />
-                          </Link>
-
-                          <DeletePopup
-                            item={blog}
-                            title="Delete project"
-                            step={4}
-                            fetchTeamList={fetchMarketLists}
-                          />
-                        </div> */}
                         </div>
                       </Link>
                     </div>
@@ -172,6 +181,7 @@ const ProjectList = () => {
                 />
               </div>
             </div>
+
           </div>
         </div>
       </div>

@@ -6,8 +6,8 @@ import ImageUploader from "./ImageUploader";
 import SideBarAdmin from "../common/SideBarAdmin";
 
 const ProjectAdd = () => {
-    const { Id } = useParams();
-    console.log("Id", Id)
+    const { id } = useParams();
+    console.log("Id", id)
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [images, setImages] = useState([]);
@@ -22,6 +22,7 @@ const ProjectAdd = () => {
         location: "",
         banner_image: "",
         list_image: "",
+        id:""
     });
     console.log("images", images)
 
@@ -53,28 +54,34 @@ const ProjectAdd = () => {
         setLoading(true);
         try {
             const main = new Listing();
-            const response = await main.ProjectGetId(Id);
+            const response = await main.ProjectGetDetails(id);
+            console.log("response", response)
             if (response?.data?.data) {
-                const data = response?.data?.data;
-                const formattedDate = data.date ? new Date(data.date).toISOString().split("T")[0] : "";
+                const data = response.data.data;
+                const formattedDate = data.date
+                    ? new Date(data.date).toISOString().split("T")[0]
+                    : "";
                 setInstructorDetails({
                     ...data,
                     date: formattedDate,
                 });
+                if (data.images && Array.isArray(data.images)) {
+                    setImages(data.images);
+                }
             } else {
-                toast.error("Failed to fetch Project details.");
+                toast.error("Failed to fetch project details.");
             }
         } catch (error) {
-            console.error("Error fetching blog data:", error);
-            toast.error("Unable to load blog data.");
+            console.error("Error fetching project data:", error);
+            toast.error("Unable to load project data.");
         } finally {
             setLoading(false);
         }
     };
 
     useEffect(() => {
-        if (Id) fetchInstructorData();
-    }, [Id]);
+        if (id) fetchInstructorData();
+    }, [id]);
 
 
     const handleInputChange = (e) => {
@@ -103,25 +110,31 @@ const ProjectAdd = () => {
         setLoading(true);
         const main = new Listing();
         const formData = new FormData();
-        console.log("formData" ,formData)
-formData.append("title", instructorDetails.title);
-formData.append("content", instructorDetails.content);
-formData.append("category", instructorDetails.category);
-formData.append("client", instructorDetails.client);
-formData.append("client_review", instructorDetails.client_review);
-formData.append("client_name", instructorDetails.client_name);
-formData.append("location", instructorDetails.location);
-formData.append("banner_image", instructorDetails.banner_image);
-formData.append("list_image", instructorDetails.list_image);
-images.forEach((img) => {
-  formData.append("images[]", img); // remove [] — most servers expect 'images' multiple times
-});
+        console.log("formData", formData)
+        formData.append("title", instructorDetails.title);
+        formData.append("content", instructorDetails.content);
+        formData.append("id", instructorDetails._id);
+        formData.append("category", instructorDetails.category);
+
+        formData.append("client", instructorDetails.client);
+        formData.append("client_review", instructorDetails.client_review);
+        formData.append("client_name", instructorDetails.client_name);
+        formData.append("location", instructorDetails.location);
+        formData.append("banner_image", instructorDetails.banner_image);
+        formData.append("list_image", instructorDetails.list_image);
+        images.forEach((img) => {
+            formData.append("images[]", img); // remove [] — most servers expect 'images' multiple times
+        });
         try {
-            let response;
-            response = await main.ProjectAdds(instructorDetails);
+              let response;
+      if (id) {
+        response = await main.ProjectUpdate(formData);
+      } else {
+        response = await main.ProjectAdds(formData);
+      }
             if (response?.data) {
                 toast.success(response.data.message || "Operation successful");
-                if (!Id) {
+                if (!id) {
                     setInstructorDetails({
                         Image: "",
                         content: "",
@@ -150,7 +163,7 @@ images.forEach((img) => {
             <div className="w-full lg:w-[calc(100%-304px)] ">
                 <div className="px-4 py-2 lg:px-10 lg:py-2.5  ">
                     <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-                        {Id ? "Edit Project" : "Add Project"}
+                        {id ? "Edit Project" : "Add Project"}
                     </h2>
 
                     <hr className="mb-6" />
@@ -267,6 +280,9 @@ images.forEach((img) => {
                                 className="border border-gray-300 p-2 rounded-md w-full"
                             />
                         </div>
+                         {
+                <img src={instructorDetails?.list_image} />
+              }
 
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Project Banner Image </label>
@@ -278,6 +294,8 @@ images.forEach((img) => {
                                 className="border border-gray-300 p-2 rounded-md w-full"
                             />
                         </div>
+                <img src={instructorDetails?.banner_image} />
+
 
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Client Review</label>
@@ -329,7 +347,7 @@ images.forEach((img) => {
                         >
                             <label className="block text-sm font-medium text-gray-700">Project Image</label>
 
-                            <ImageUploader images={images} setImages={setImages} setInstructorDetails={setInstructorDetails} />
+                            <ImageUploader images={images} setImages={setImages} setInstructorDetails={setInstructorDetails}  instructorDetails={instructorDetails}/>
 
                         </div>
                         {/* Submit Button */}
@@ -339,7 +357,7 @@ images.forEach((img) => {
                                 disabled={loading}
                                 className="inline-flex items-center px-6 py-2 bg-red-500 text-white font-semibold rounded-md shadow hover:bg-red-600 transition-all disabled:opacity-50"
                             >
-                                {loading ? "Saving..." : Id ? "Update Project" : "Add Project"}
+                                {loading ? "Saving..." : id ? "Update Project" : "Add Project"}
                             </button>
                         </div>
                     </form>

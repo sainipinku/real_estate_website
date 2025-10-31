@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MdAdd } from "react-icons/md";
 
-const ImageUploader = ({ images, setImages, setInstructorDetails }) => {
+const ImageUploader = ({ images, setImages, setInstructorDetails, instructorDetails }) => {
     const [dragIndex, setDragIndex] = useState(null);
 
     const handleFileChange = (e) => {
@@ -113,6 +113,32 @@ const ImageUploader = ({ images, setImages, setInstructorDetails }) => {
                         </div>
                     </div>
                 ))}
+
+                {instructorDetails?.Image?.map((image, index) => {
+                    // Check if image is a File or a string URL
+                    const imageUrl =
+                        typeof image === "string" ? image : URL.createObjectURL(image);
+
+                    return (
+                        <div
+                            key={index}
+                            draggable
+                            onDragStart={() => handleDragStart(index)}
+                            onDragOver={(e) => e.preventDefault()}
+                            onDrop={() => handleDrop(index)}
+                            className="relative group border rounded-md overflow-hidden shadow"
+                        >
+                            <img
+                                src={imageUrl}
+                                alt={`Upload ${index}`}
+                                className="w-full h-40 object-cover"
+                            />
+
+
+                        </div>
+                    );
+                })}
+
             </div>
         </>
     );

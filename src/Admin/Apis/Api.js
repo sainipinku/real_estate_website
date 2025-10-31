@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL =  process.env.REACT_BASE_URL || "https://api.cadmaxpro.com/api";
+const API_URL =  process.env.REACT_BASE_URL || "http://localhost:5000/api" ;
+// || "https://api.cadmaxpro.com/api";
 
 function getToken() {
   if (typeof window !== 'undefined') {
