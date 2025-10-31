@@ -22,9 +22,11 @@ const ProjectAdd = () => {
         location: "",
         banner_image: "",
         list_image: "",
-        id:""
+        id: ""
     });
     console.log("images", images)
+
+    const [preview, setPreview] = useState(null);
 
     // Handle file selection
     const handleUpload = (e) => {
@@ -34,9 +36,13 @@ const ProjectAdd = () => {
                 ...prev,
                 banner_image: file,
             }));
+            const previewURL = URL.createObjectURL(file);
+            setPreview(previewURL);
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     };
+      const [previewBanner, setPreviewBanner] = useState(null);
+
 
     const handleUploads = (e) => {
         const file = e.target.files[0];
@@ -45,6 +51,10 @@ const ProjectAdd = () => {
                 ...prev,
                 list_image: file,
             }));
+            const previewURL = URL.createObjectURL(file);
+
+            setPreviewBanner(previewURL);
+
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     };
@@ -126,12 +136,12 @@ const ProjectAdd = () => {
             formData.append("images[]", img); // remove [] — most servers expect 'images' multiple times
         });
         try {
-              let response;
-      if (id) {
-        response = await main.ProjectUpdate(formData);
-      } else {
-        response = await main.ProjectAdds(formData);
-      }
+            let response;
+            if (id) {
+                response = await main.ProjectUpdate(formData);
+            } else {
+                response = await main.ProjectAdds(formData);
+            }
             if (response?.data) {
                 toast.success(response.data.message || "Operation successful");
                 if (!id) {
@@ -280,10 +290,24 @@ const ProjectAdd = () => {
                                 className="border border-gray-300 p-2 rounded-md w-full"
                             />
                         </div>
-                         {
-                <img src={instructorDetails?.list_image} />
-              }
-
+                        {previewBanner ? (
+                                <div className="mt-4">
+                            <img
+                                src={previewBanner }
+                                alt="Banner Preview"
+                                className="w-full h-48 object-cover rounded-md border"
+                            />
+                        </div>
+                        ) : (
+                                <div className="mt-4">
+                            <img
+                                src={ instructorDetails?.list_image}
+                                alt="Banner Preview"
+                                className="w-full h-48 object-cover rounded-md border"
+                            />
+                        </div>
+                        )}
+                    
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Project Banner Image </label>
 
@@ -294,7 +318,22 @@ const ProjectAdd = () => {
                                 className="border border-gray-300 p-2 rounded-md w-full"
                             />
                         </div>
-                <img src={instructorDetails?.banner_image} />
+                        <div className="mt-4">
+                            {preview ? (
+                                   <img
+                                src={preview }
+                                alt="Banner Preview"
+                                className="w-full h-48 object-cover rounded-md border"
+                            />
+                            ) : (
+                                   <img
+                                src={ instructorDetails?.banner_image}
+                                alt="Banner Preview"
+                                className="w-full h-48 object-cover rounded-md border"
+                            />
+                            )}
+                         
+                        </div>
 
 
                         <div>
@@ -347,7 +386,7 @@ const ProjectAdd = () => {
                         >
                             <label className="block text-sm font-medium text-gray-700">Project Image</label>
 
-                            <ImageUploader images={images} setImages={setImages} setInstructorDetails={setInstructorDetails}  instructorDetails={instructorDetails}/>
+                            <ImageUploader images={images} setImages={setImages} setInstructorDetails={setInstructorDetails} instructorDetails={instructorDetails} />
 
                         </div>
                         {/* Submit Button */}
