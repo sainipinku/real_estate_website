@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import Listing from "../Admin/Apis/Listing";
 import AnimatedHeading from "../component/AnimatedHeading";
 import Banner from "../component/Banner";
+import { Helmet } from "react-helmet-async";
 
 function Contact() {
 
@@ -74,6 +75,17 @@ function Contact() {
     };
 
     return (<>
+      <Helmet>
+        <title>Contact Us | Cadmax Pro</title>
+        <meta
+          name="description"
+          content="Get in touch with Cadmax Pro for architectural and interior design consultations. We’re here to discuss your dream project."
+        />
+        <meta
+          name="keywords"
+          content="contact Cadmax Pro, architecture consultation, design enquiry, interior design contact, Cadmax office"
+        />
+      </Helmet>
         <div className="min-h-screen">
             <Header />
 

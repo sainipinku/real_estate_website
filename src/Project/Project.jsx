@@ -6,6 +6,7 @@ import Banner from "../component/Banner";
 import { useEffect, useState } from "react";
 import Listing from "../Admin/Apis/Listing";
 import LoadingSpinner from "../component/Loading";
+import { Helmet } from "react-helmet-async";
 
 function Project() {
     const [currentPage, setCurrentPage] = useState(1);
@@ -43,6 +44,17 @@ function Project() {
 
     return (
         <>
+         <Helmet>
+        <title>Our Projects | Cadmax Pro</title>
+        <meta
+          name="description"
+          content="Explore Cadmax Pro’s portfolio showcasing remarkable architectural and interior design projects, blending creativity, precision, and luxury."
+        />
+        <meta
+          name="keywords"
+          content="Cadmax Pro projects, architectural portfolio, interior design projects, luxury design, construction works, modern buildings"
+        />
+      </Helmet>
             <div className="min-h-screen">
                 <Header />
                 <Banner

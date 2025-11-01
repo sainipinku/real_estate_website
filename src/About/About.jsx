@@ -6,6 +6,8 @@ import Readybring from "../Home/ReadyBring";
 import Achivement from "./Achivement"
 import AnimatedHeading from "../component/AnimatedHeading";
 import Banner from "../component/Banner";
+import { Helmet } from "react-helmet-async";
+
 function About() {
     const features = [
         {
@@ -28,6 +30,18 @@ function About() {
     ];
 
     return (<>
+      <Helmet>
+        <title>About Us | Cadmax Pro</title>
+        <meta
+          name="description"
+          content="Learn about Cadmax Pro — a leading architectural and interior design company known for creativity, innovation, and excellence in every project."
+        />
+        <meta
+          name="keywords"
+          content="Cadmax Pro about, architecture firm, interior design company, creative design, architectural excellence, design consultancy"
+        />
+      </Helmet>
+
         <div className="min-h-screen ">
             <Header />
             <Banner image={"https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/home/Updated.png"} title={"Why Us"} css={"md:mt-[-100px] "} overlay={false} />

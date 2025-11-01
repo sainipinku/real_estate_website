@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import "swiper/css/autoplay";
+import { Helmet } from "react-helmet-async";
 
 function Services() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -24,6 +25,17 @@ function Services() {
 
   return (
     <>
+     <Helmet>
+        <title>Our Services | Cadmax Pro</title>
+        <meta
+          name="description"
+          content="Cadmax Pro offers architectural design, interior design, project management, and turnkey construction services to bring your vision to life."
+        />
+        <meta
+          name="keywords"
+          content="architectural services, interior design, construction, project management, turnkey projects, design consultancy"
+        />
+      </Helmet>
       <div className="min-h-screen">
         <Header />
         {/* Hero section */}
