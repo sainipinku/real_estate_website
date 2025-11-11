@@ -25,7 +25,7 @@ function Services() {
 
   return (
     <>
-     <Helmet>
+      <Helmet>
         <title>Our Services | Cadmax Pro</title>
         <meta
           name="description"
@@ -76,23 +76,23 @@ function Services() {
             }}
             className="w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden"
           >
-            {services && services.map((service, index) => (
+            {services && services?.map((service, index) => (
               <SwiperSlide
                 key={index}
                 style={{
                   flexBasis:
                     window.innerWidth >= 1024
                       ? hoveredIndex === index
-                        ? "50%"      // slightly smaller to avoid overflow
+                        ? "50%"
                         : hoveredIndex !== null
-                          ? "30%"  // balanced so total ≈ 100%
+                          ? "30%"
                           : "33.33%"
-                      : "100%"
+                      : "100%",
                 }}
               >
                 <Link
                   to={`/services/${service?.slug}`}
-                  className="relative group cursor-pointer overflow-hidden w-full h-full "
+                  className="relative group cursor-pointer overflow-hidden w-full h-full"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
@@ -102,14 +102,17 @@ function Services() {
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-75"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="hover:text-yellow-400 text-white text-[20px] md:text-[22px] uppercase font-semibold tracking-wide text-center">
+
+                  {/* FIXED TEXT WRAPPER */}
+                  <div className="absolute inset-0 flex items-center justify-center text-center pointer-events-none px-3">
+                    <h3 className="text-white text-[18px] md:text-[22px] uppercase font-semibold tracking-wide leading-snug md:leading-normal hover:text-yellow-400">
                       {service.title}
                     </h3>
                   </div>
                 </Link>
               </SwiperSlide>
             ))}
+
           </Swiper>
         </div>
       </div>
