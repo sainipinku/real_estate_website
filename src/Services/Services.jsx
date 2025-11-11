@@ -105,10 +105,11 @@ function Services() {
 
                   {/* FIXED TEXT WRAPPER */}
                   <div className="absolute inset-0 flex items-center justify-center text-center pointer-events-none px-3">
-                    <h3 className="text-white text-[18px] md:text-[22px] uppercase font-semibold tracking-wide leading-snug md:leading-normal hover:text-yellow-400">
+                    <h3 className="text-white text-[18px] md:text-[22px] uppercase font-semibold tracking-wide leading-snug md:leading-normal group-hover:text-white-400 transform translate-y-0">
                       {service.title}
                     </h3>
                   </div>
+
                 </Link>
               </SwiperSlide>
             ))}
