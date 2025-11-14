@@ -47,14 +47,14 @@ function Main() {
   return (
     <>
       <Helmet>
-        <title>Cadmax Pro | Architectural Design & Construction Excellence</title>
+        <title>Rajasthan’s Best Urban Planning | Real Estate Firm | Cadmax</title>
         <meta
           name="description"
-          content="Cadmax Pro delivers innovative architectural and interior design solutions with European-inspired aesthetics, combining modern design with functional excellence."
+          content="Cadmax pro delivers top-tier urban planning, real estate development, infrastructure planning, and interior design and planner services across Jaipur, Rajasthan"
         />
         <meta
           name="keywords"
-          content="Cadmax Pro, architecture, interior design, construction, design consultancy, modern architecture, building design, CAD services"
+          content=" Best urban planners, Land survey in Jaipur, Interior design services in Jaipur, ⁠Architecture Services Services in Jaipur, Infrastructure service in Jaipur, Real Estate Services in Jaipur"
         />
       </Helmet>
       <div className="min-h-screen ">

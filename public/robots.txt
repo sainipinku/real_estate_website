@@ -1,3 +1,15 @@
-# https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
-Disallow:
+Disallow:/admin/
+Disallow: /wp-admin/*
+Disallow: /admin/login
+Disallow:/dashboard
+Disallow: /wp-content/ajax_call/*
+Disallow: /c/
+Disallow: /dashboard/app/build/*
+Disallow: /wp-content/*.php
+Disallow: /*?s=*
+Disallow: */feed/
+User-agent: GPTBot
+Disallow: /
+
