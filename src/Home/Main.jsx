@@ -37,8 +37,6 @@ function Main() {
     {
       front: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/work/Cadmax.jpg",
     },
-
-
   ]
   useEffect(() => {
     AOS.init();
