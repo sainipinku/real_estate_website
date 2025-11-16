@@ -26,9 +26,11 @@ import Dashboard from "./Admin/Dashboard/Dashboard";
 import Setting from "./Admin/setting/Setting";
 import ServicesDetails from "./Services/Details";
 import ScrollToTop from "./component/ScrollToTop";
+import { AudioProvider } from './contexts/AudioContext';
 
 function App() {
   return (
+      <AudioProvider>
     <Router>
       <ScrollToTop />   {/* Scroll to top*/}
       <Toaster position="top-right"
@@ -39,7 +41,7 @@ function App() {
         <Route path="/services/:slug" element={<ServicesDetails />} />
         <Route path="/project" element={<Project />} />
         <Route path="/project/:slug" element={<ProjectDetails />} />
-        <Route path="/blog" element={<Blog />} />
+        {/* <Route path="/blog" element={<Blog />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/blog/details" element={<Details />} />
         <Route path="/contact" element={<Contact />} />
@@ -65,6 +67,7 @@ function App() {
         <Route path="/admin/settings" element={<Setting />} />
       </Routes>
     </Router>
+    </AudioProvider>
   );
 }
 export default App;
