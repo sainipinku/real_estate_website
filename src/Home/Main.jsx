@@ -84,7 +84,19 @@ function Main() {
                   />
                   {/* <div className="absolute inset-0 bg-black/40"></div> */}
                   <div className='absolute  left-[0] right-[0] bottom-[50px] w-full max-w-[1320px] m-auto px-[15px]'>
-                    <h1 className='mb-[15px] fontspring text-[30px] md:text-[60px] lg:text-[80px] text-white leading-[35px] md:leading-[65px] lg:leading-[85px] pe-[10px] md:pe-[100px] lg:pe-[160px] '>Your Dreams, Our Design</h1>
+                    {/* 👉 First 3 slides → <p> tag  */}
+                    {index < 3 && (
+                      <p className='mb-[15px] fontspring text-[20px] md:text-[35px] lg:text-[45px] text-white leading-[28px] md:leading-[45px] lg:leading-[55px] pe-[10px] md:pe-[100px] lg:pe-[160px]'>
+                        Your Dreams, Our Design
+                      </p>
+                    )}
+
+                    {/* 👉 Last slide → <h1> tag */}
+                    {index === slides.length - 1 && (
+                      <h1 className='mb-[15px] fontspring text-[30px] md:text-[60px] lg:text-[80px] text-white leading-[35px] md:leading-[65px] lg:leading-[85px] pe-[10px] md:pe-[100px] lg:pe-[160px]'>
+                        Your Dreams, Our Design
+                      </h1>
+                    )}
                     <p className='text-[15px] md:text-[18px] lg:text-[20px] text-[#ffffffd1] pe-[0px] md:pe-[150px] lg:pe-[300px]'>
                       At cadmax projects, we transform barren lands to dream destinations and routine spaces to elegant environments through our unique combination of creative planning and  designing.
                     </p>
