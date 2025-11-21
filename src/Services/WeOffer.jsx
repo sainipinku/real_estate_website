@@ -26,20 +26,28 @@ export default function WeOffer({ services }) {
           modules={[Autoplay]}
           className="w-full "
         >
-          {services && services?.map((service, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="relative h-[300px] md:h-[500px]  lg:h-[450px] w-full overflow-hidden shadow-lg group cursor-grab">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-[10%] flex items-end justify-start px-[15px] pb-[15px]">
-                  <h3 className="fontspring text-black text-[20px] md:text-[24px] lg:text-[28px] text-center tracking-wider leading-[22px] md:leading-[28px] lg:leading-[30px]">{service.title}</h3>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
+         {services && services?.map((service, idx) => (
+  <SwiperSlide key={idx}>
+    <div className="h-auto w-full shadow-lg group cursor-grab">
+
+      {/* Image Box */}
+      <div className="relative h-[300px] md:h-[500px] lg:h-[450px] w-full overflow-hidden">
+        <img
+          src={service.image}
+          alt={service.title}
+          className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+
+      {/* Title BELOW the image */}
+      <h3 className="fontspring text-black text-[20px] md:text-[24px] lg:text-[28px] tracking-wider px-4 py-3 text-left">
+        {service.title}
+      </h3>
+
+    </div>
+  </SwiperSlide>
+))}
+
         </Swiper>
       </div>
     </section>
