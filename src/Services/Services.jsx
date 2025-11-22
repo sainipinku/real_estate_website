@@ -76,43 +76,48 @@ function Services() {
             }}
             className="w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden"
           >
-            {services && services?.map((service, index) => (
-              <SwiperSlide
-                key={index}
-                style={{
-                  flexBasis:
-                    window.innerWidth >= 1024
-                      ? hoveredIndex === index
-                        ? "50%"
-                        : hoveredIndex !== null
-                          ? "30%"
-                          : "33.33%"
-                      : "100%",
-                }}
-              >
-                <Link
-                  to={`/services/${service?.slug}`}
-                  className="relative group cursor-pointer overflow-hidden w-full h-full"
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  <img
-                    src={service.image}
-                    loading="lazy"
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-75"
-                  />
+           {services && services?.map((service, index) => (
+  <SwiperSlide
+    key={index}
+    className="!h-[320px] md:!h-[450px] lg:!h-[450px]"
+    style={{
+      flexBasis:
+        window.innerWidth >= 1024
+          ? hoveredIndex === index
+            ? "50%"
+            : hoveredIndex !== null
+              ? "30%"
+              : "33.33%"
+          : "100%",
+    }}
+  >
+    <Link
+      to={`/services/${service?.slug}`}
+      className="relative group cursor-pointer overflow-hidden w-full h-full"
+      onMouseEnter={() => setHoveredIndex(index)}
+      onMouseLeave={() => setHoveredIndex(null)}
+    >
+      <img
+        src={service.image}
+        loading="lazy"
+        alt={service.title}
+        className="w-full h-full min-h-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-75"
+      />
 
-                  {/* FIXED TEXT WRAPPER */}
-                  <div className="absolute inset-0 flex items-center justify-center text-center pointer-events-none px-3">
-                    <h3 className="text-white text-[18px] md:text-[22px] uppercase font-semibold tracking-wide leading-snug md:leading-normal group-hover:text-white-400 transform translate-y-0">
-                      {service.title}
-                    </h3>
-                  </div>
+      {/* Fixed iOS center */}
+      <div className="
+        absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+        text-center w-full px-3 pointer-events-none
+      ">
+        <h3 className="text-white text-[18px] md:text-[22px] uppercase font-semibold tracking-wide">
+          {service.title}
+        </h3>
+      </div>
 
-                </Link>
-              </SwiperSlide>
-            ))}
+    </Link>
+  </SwiperSlide>
+))}
+
 
           </Swiper>
         </div>
