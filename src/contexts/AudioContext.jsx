@@ -10,14 +10,6 @@ export const AudioProvider = ({ children }) => {
 
   // Initialize audio only once
   useEffect(() => {
-     const isAdmin = window.location.pathname.startsWith('/admin');
-
-  // Disable audio in admin panel
-  if (isAdmin) {
-    setIsInitialized(false);
-    return;
-  }
-
     if (!audioRef.current) {
       audioRef.current = new Audio('/background.mp3');
       audioRef.current.volume = 1.0;
