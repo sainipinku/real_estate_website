@@ -2,8 +2,8 @@ import "../App.css";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 import AnimatedHeading from "../component/AnimatedHeading";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,18 +14,7 @@ import { Helmet } from "react-helmet-async";
 
 function Services() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-const [screenWidth, setScreenWidth] = useState(0);
 
-useEffect(() => {
-  setScreenWidth(window.innerWidth);
-
-  const handleResize = () => {
-    setScreenWidth(window.innerWidth);
-  };
-
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
   const services = [
     { title: "URBAN PLANNING", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/service22.jpg", slug: "urban-planning" },
     { title: "REAL ESTATE", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/services11.jpg", slug: "real-estate" },
@@ -90,17 +79,17 @@ useEffect(() => {
            {services && services?.map((service, index) => (
   <SwiperSlide
     key={index}
-  className="!h-[320px] md:!h-[450px] lg:!h-[450px]"
-  style={{
-    flexBasis:
-      screenWidth >= 1024
-        ? hoveredIndex === index
-          ? "50%"
-          : hoveredIndex !== null
-            ? "30%"
-            : "33.33%"
-        : "100%",
-  }}
+    className="!h-[320px] md:!h-[450px] lg:!h-[450px]"
+    style={{
+      flexBasis:
+        window.innerWidth >= 1024
+          ? hoveredIndex === index
+            ? "50%"
+            : hoveredIndex !== null
+              ? "30%"
+              : "33.33%"
+          : "100%",
+    }}
   >
     <Link
       to={`/services/${service?.slug}`}
