@@ -6,6 +6,7 @@ import SideBarAdmin from "../common/SideBarAdmin";
 import HeaderAdmin from "../common/HeaderAdmin";
 import AddTeam from "./AddTeam"
 import toast from "react-hot-toast";
+import DeletePopup from "../component/DeletePopup";
 
 function ListTeam() {
     const [team, setTeams] = useState([]);
@@ -79,25 +80,49 @@ function ListTeam() {
                                     {team.map((member, index) => (
                                         <div
                                             key={index}
-                                            className="flex flex-col items-start justify-start transform transition-transform duration-500 hover:-translate-y-4 min-h-[600px] bg-white shadow-md rounded-2xl p-4"
+                                            className="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300"
+
                                         >
-                                            {/* Image Box */}
-                                            <div className="w-full h-[420px] flex items-center justify-center overflow-hidden bg-gray-50 rounded-xl">
+
+                                            <div className="relative">
+                                                {/* Image */}
                                                 <img
-                                                    src={member.imageUrl}
-                                                    alt={member.name}
-                                                    className="h-[380px] object-contain"
+                                                    className="w-full h-[500px] object-cover rounded-t-lg"
+                                                    alt={member.name || "Blog Image"}
+                                                    src={member?.imageUrl || "/work/Interior.png"}
                                                 />
+
+                                                {/* Delete + Edit Buttons Overlay */}
+                                                <div className="absolute top-2 left-2 flex gap-2">
+                                                    {/* Edit Button */}
+                                                    <AddTeam fetchTeamList={fetchTeamList} item={member} />
+
+                                                 
+                                                </div>
+
+                                                                        <div className="absolute top-2 right-2 flex gap-2">
+                                                    {/* Edit Button */}
+
+                                                    <DeletePopup
+                                                        item={member}
+                                                        title="Delete Teams"
+                                                        step={5}
+                                                        fetchTeamList={fetchTeamList}
+                                                    />
+                                                </div>
                                             </div>
 
+
+
                                             {/* Text */}
-                                            <p className="text-start font-semibold mt-3 text-[18px] md:text-[20px] lg:text-[22px] text-[#000112]">
+                                            <p className="p-2 text-center font-semibold mt-3 text-[18px] md:text-[20px] lg:text-[22px] text-[#000112]">
                                                 {member.name}
                                             </p>
-                                            <p className="text-start text-[14px] md:text-[16px] lg:text-[18px] text-[#94A393] font-medium uppercase">
+                                            <p className="p-2 text-center text-[14px] md:text-[16px] lg:text-[18px] text-[#94A393] font-medium uppercase">
                                                 {member.position}
                                             </p>
                                         </div>
+
                                     ))}
                                 </div>
 

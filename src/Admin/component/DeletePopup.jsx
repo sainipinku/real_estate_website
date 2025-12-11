@@ -41,6 +41,10 @@ const DeletePopup = ({ item, fetchTeamList, step = 1 }) => {
                 // Job deletion
                 response = await main.ProjectDelete({ _id: item._id });
             }
+             else if (step === 5) {
+                // Job deletion
+                response = await main.TeamDelete({ _id: item._id });
+            }
             else {
                 throw new Error("Unknown delete step provided");
             }

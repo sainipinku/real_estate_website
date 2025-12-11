@@ -7,14 +7,14 @@ class Listing extends Component {
         return Api.post("/login", data)
     }
 
-    async profileVerify(){
+    async profileVerify() {
         return Api.get("/profile")
     }
 
     async resetpassword(data) {
         return Api.post("/reset-password", data)
     }
-    
+
     async contact(data) {
         return Api.post("/contact-add", data)
     }
@@ -50,7 +50,7 @@ class Listing extends Component {
     }
 
 
-  async DeleteTeam(data) {
+    async DeleteTeam(data) {
         return Api.post("/teams-delete", data)
     }
 
@@ -79,6 +79,10 @@ class Listing extends Component {
         return Api.post("/project/delete", data)
     }
 
+    async TeamDelete(data) {
+        return Api.post("/team/delete", data)
+    }
+
     async BlogDelete(data) {
         return Api.post("/blog/delete", data)
     }
@@ -105,7 +109,7 @@ class Listing extends Component {
         return Api.get("/jobget")
     }
 
-     async JobGets(slug) {
+    async JobGets(slug) {
         return Api.get(`/jobget/${slug}`)
     }
     async AddJob(data) {
@@ -119,17 +123,20 @@ class Listing extends Component {
     async JobDelete(data) {
         return Api.post("/jobdelete", data)
     }
-    
+
 
     async ProfileUpdate(data) {
         return Api.post("/profile-update", data)
     }
 
-     async ProjectGetDetails(slug) {
+    async ProjectGetDetails(slug) {
         return Api.get(`/project-details/${slug}`)
     }
 
-    
+    async Editeam(data) {
+        return ApiallowFile.post("/teams/edit", data)
+    }
+
     render() {
         return (
             <div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Listing from "../Apis/Listing";
 import toast from "react-hot-toast";
 import { MdAdd, MdEdit } from "react-icons/md";
@@ -13,6 +13,13 @@ function AddTeam({ item, fetchTeamList }) {
     _id: item?._id,
   });
 
+  useEffect(() => {
+    setFormData({
+      name: item?.name,
+      position: item?.position
+    })
+    setPreview(item?.imageUrl)
+  }, [item])
   const [preview, setPreview] = useState(item?.imageUrl || "");
 
   // Handle text input changes
@@ -137,8 +144,8 @@ function AddTeam({ item, fetchTeamList }) {
                 {loading
                   ? "Processing..."
                   : item?._id
-                  ? "Update Team Member"
-                  : "Add Team Member"}
+                    ? "Update Team Member"
+                    : "Add Team Member"}
               </button>
             </form>
           </div>
