@@ -27,9 +27,11 @@ const Achivement = () => {
         { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image18.png" },
         { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image19.png" },
         { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image17.png" },
+        { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/awardscadmax.jpg" },
         { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image18.png" },
         { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image19.png" },
         { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image17.png" },
+        { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/awardscadmax.jpg" },
     ];
 
     // 🔹 Slick Slider Settings (for Desktop)
@@ -59,13 +61,13 @@ const Achivement = () => {
                     <Slider {...slickSettings}>
                         {cities && cities?.map((item, index) => (
                             <div key={index}>
-                             <div className="slide-item flex justify-center items-center bg-white">
-  <img
-    src={item.img}
-    alt={`Achievement ${index + 1}`}
-    className="w-full h-[430px] md:h-[490px] xl:h-[500px] object-contain rounded-xl transition-transform duration-500"
-  />
-</div>
+                                <div className="slide-item flex justify-center items-center bg-white">
+                                    <img
+                                        src={item.img}
+                                        alt={`Achievement ${index + 1}`}
+                                        className="w-full h-[430px] md:h-[490px] xl:h-[500px] object-contain rounded-xl transition-transform duration-500"
+                                    />
+                                </div>
 
                             </div>
                         ))}

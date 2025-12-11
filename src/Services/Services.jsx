@@ -16,7 +16,7 @@ function Services() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const services = [
-    { title: "URBAN PLANNING", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/service22.jpg", slug: "urban-planning" },
+    { title: "URBAN PLANNING", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/SANGAMCITY.jpg", slug: "urban-planning" },
     { title: "REAL ESTATE", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/services11.jpg", slug: "real-estate" },
     { title: "INFRASTRUCTURE ", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/work/Infrastructure.jpg", slug: "infrastructure" },
     { title: "ARCHITECTURE", image: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/services/services44.jpg", slug: "architecture" },
