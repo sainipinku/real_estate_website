@@ -54,9 +54,6 @@ function Services() {
             </AnimatedHeading>
           </div>
         </div>
-
-
-
         <div className="w-full py-[40px] px-[15px]">
           <Swiper
             modules={[Autoplay]}
@@ -104,12 +101,12 @@ function Services() {
                   />
 
                   {/* FIXED TEXT WRAPPER */}
-                  <div className="absolute inset-0 flex items-center justify-center text-center pointer-events-none px-3">
-                    <h3 className="text-white text-[18px] md:text-[22px] uppercase font-semibold tracking-wide leading-snug md:leading-normal group-hover:text-white-400 transform translate-y-0">
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+                text-center pointer-events-none px-3 w-full">
+                    <h3 className="text-white text-[18px] md:text-[22px] uppercase font-semibold tracking-wide">
                       {service.title}
                     </h3>
                   </div>
-
                 </Link>
               </SwiperSlide>
             ))}
