@@ -28,10 +28,6 @@ const Achivement = () => {
         { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image19.png" },
         { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image17.png" },
         { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/awardscadmax.jpg" },
-        { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image18.png" },
-        { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image19.png" },
-        { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/image17.png" },
-        { img: "https://cadmaxpro-buket.s3.ap-south-1.amazonaws.com/assets/about/awardscadmax.jpg" },
     ];
 
     // 🔹 Slick Slider Settings (for Desktop)
