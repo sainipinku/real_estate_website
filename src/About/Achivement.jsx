@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "swiper/css";
 import "swiper/css/autoplay";
 import AnimatedHeading from "../component/AnimatedHeading";
-import "../App.css"; // 👈 Add CSS for blur effect
+import "../App.css"; 
 
 const Achivement = () => {
     const [isMobile, setIsMobile] = useState(false);
